@@ -198,6 +198,28 @@ nav.show ul {
   justify-content: center;
 }
 </style>
+
+<style>
+body::before {
+  content: "";
+  background: url('bglogo.png') no-repeat center center;
+  background-size: contain;
+  opacity: 0.03;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+@media (max-width: 768px) {
+  body::before {
+    background-size: 80%;
+    opacity: 0.05;
+  }
+}
+</style>
 </head>
 <body>
 <!-- Açılış ekranı -->
@@ -226,7 +248,7 @@ window.addEventListener("load", function() {
 <li><a href="index.html">Ana Sayfa</a></li>
 <li><a href="hakkimizda.html">Hakkımızda</a></li>
 <li><a href="hizmetler.html">Hizmetler</a></li>
-<li><a href="iletisim.html">İletişim</a></li>
+<li><a href="tel:+905551112233" style="color:#fff;font-weight:bold;background:#28a745;padding:6px 12px;border-radius:6px;">📞 0555 111 22 33</a></li>
 </ul>
 </nav>
 </header>
@@ -246,9 +268,9 @@ window.addEventListener("load", function() {
 <a href="hizmetler.html" style="text-decoration: none; color: #000; font-weight: bold;">Hizmetleri Gör →</a>
 </div>
 <div style="flex: 1 1 300px; background: white; padding: 20px; border: 1px solid #ffcc00; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.05);">
-<h3 style="color: #ffcc00;">İletişim</h3>
+<h3 style="color: #ffcc00;">📞 Hemen Bize Ulaşın: 0555 111 22 33</h3>
 <p>Bizimle iletişime geçmek için tüm kanallarımız aktif ve hazır.</p>
-<a href="iletisim.html" style="text-decoration: none; color: #000; font-weight: bold;">İletişim Kur →</a>
+<a href="tel:+905551112233" style="color:#fff;font-weight:bold;background:#28a745;padding:6px 12px;border-radius:6px;">📞 0555 111 22 33</a>
 </div>
 </div>
 </section>
@@ -270,7 +292,7 @@ window.addEventListener("load", function() {
 </div>
 </section>
 <section id="contact">
-<h2 style="font-size: 36px; text-align: center; font-weight: bold; margin-top: 40px; color: #f1c40f;">İletişim</h2>
+<h2 style="font-size: 36px; text-align: center; font-weight: bold; margin-top: 40px; color: #f1c40f;">📞 Hemen Bize Ulaşın: 0555 111 22 33</h2>
 <p>📞 0505 384 52 73<br/>📍 Buket Sok. No:29, Ataşehir / İstanbul<br/>✉️ info@atacannakliyat.com</p>
 <br/>
 <a class="btn-yellow" href="https://wa.me/905053845273" target="_blank">📱 WhatsApp'tan Ulaş</a>
