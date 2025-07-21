@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Profesyonel evden eve nakliyat hizmeti - Atacan Nakliyat">
+  <meta name="keywords" content="nakliyat, evden eve taşımacılık, istanbul, atacan">
+  <title>Atacan Nakliyat</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #ffffff;
+      color: #222;
+    }
+    header {
+      background: #111;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 600;
+      position: relative;
+    }
+    header nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #f1c40f;
+      transition: 0.3s;
+    }
+    header nav a:hover::after {
+      width: 100%;
+    }
+    .hero {
+      background: url('https://www.atacannakliyat.com/wp-content/uploads/2021/12/slider3.jpg') center/cover no-repeat;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+      font-size: 32px;
+      font-weight: bold;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h2 {
+      color: #f1c40f;
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+    .services, .testimonials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .item {
+      flex: 1 1 calc(33% - 20px);
+      background: white;
+      border: 2px solid #f1c40f;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+    .item:hover {
+      transform: scale(1.03);
+    }
+    .btn-yellow {
+      background: #f1c40f;
+      color: #000;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .btn-yellow:hover {
+      background: #222;
+      color: #fff;
+    }
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 60px;
+    }
+    @media (max-width: 768px) {
+      .item {
+        flex: 1 1 100%;
+      }
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div><strong>Atacan Nakliyat</strong></div>
+  <nav>
+    <a href="#about">Hakkımızda</a>
+    <a href="#services">Hizmetler</a>
+    <a href="#contact">İletişim</a>
+  </nav>
+</header>
+
+<div class="hero">Taşımacılıkta Güvenin Adı</div>
+
+<section id="about">
+  <h2>Hakkımızda</h2>
+  <p>Atacan Nakliyat, 1983 yılından bu yana İstanbul'da evden eve nakliyat, ofis taşıma ve eşya depolama hizmetleri sunmaktadır. Profesyonel ekibimiz ve geniş araç filomuzla güvenli ve hızlı taşımacılık sağlıyoruz.</p>
+</section>
+
+<section id="services">
+  <h2>Hizmetlerimiz</h2>
+  <div class="services">
+    <div class="item"><h3>Evden Eve Nakliyat</h3><p>Sigortalı ve uzman ekiplerle sorunsuz taşınma.</p></div>
+    <div class="item"><h3>Ofis Taşımacılığı</h3><p>Kurumsal taşıma çözümleri ve zaman yönetimi.</p></div>
+    <div class="item"><h3>Asansörlü Taşıma</h3><p>Yüksek katlar için asansörlü taşımacılık hizmeti.</p></div>
+  </div>
+
+<section id="referanslar">
+  <h2>Referanslarımız</h2>
+  <div class="services">
+    <div class="item"><h3>Koç Holding</h3><p>Merkez ofis arşiv taşıma ve eşya nakliyesi</p></div>
+    <div class="item"><h3>Acıbadem Sağlık Grubu</h3><p>Hastane ekipmanlarının hassas taşımacılığı</p></div>
+    <div class="item"><h3>İstanbul Büyükşehir Belediyesi</h3><p>Şube arası ofis mobilyası taşıma</p></div>
+    <div class="item"><h3>Türk Telekom</h3><p>Sunucu ve BT ekipman nakliyesi</p></div>
+    <div class="item"><h3>LC Waikiki</h3><p>Depo içi ürün transfer hizmeti</p></div>
+  </div>
+</section>
+
+
+<section id="contact">
+  <h2>İletişim</h2>
+  <p>📞 0505 384 52 73<br>📍 Buket Sok. No:29, Ataşehir / İstanbul<br>✉️ info@atacannakliyat.com</p>
+  <br>
+  <a href="https://wa.me/905053845273" class="btn-yellow" target="_blank">📱 WhatsApp'tan Ulaş</a>
+</section>
+
+<footer>
+  © 2025 Atacan Nakliyat – Tüm Hakları Saklıdır.
+</footer>
+
+</body>
+</html>
