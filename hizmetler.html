@@ -68,11 +68,104 @@ body {
 a { text-decoration: none; color: #222; transition: 0.3s; }
 a:hover { color: #f90; }
 </style>
+<style>
+    body { margin: 0; font-family: Arial, sans-serif; }
+    header, nav, footer { max-width: 100%; padding: 10px; text-align: center; }
+    nav a { display: inline-block; margin: 0 10px; font-size: 18px; }
+    img { max-width: 100%; height: auto; }
+    .container { padding: 10px; }
+    @media (max-width: 768px) {
+      nav a { display: block; margin: 10px 0; font-size: 20px; }
+    }
+    </style>
+<style>
+/* Menü stilleri */
+.menu-toggle {
+  display: none;
+  background: #111;
+  color: #fff;
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  width: 100%;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  nav ul {
+    display: none;
+    text-align: center;
+    background: #222;
+    width: 100%;
+  }
+  nav ul li {
+    display: block;
+    padding: 10px 0;
+  }
+}
+nav.show ul {
+  display: block;
+}
+
+/* Yumuşak açılma */
+.fade-in {
+  animation: fadeIn 1.2s ease-in;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+<style>
+.parallax-header {
+  background-image: url('bg.jpg');
+  min-height: 220px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  font-size: 36px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+</style>
 </head>
 <body>
-<header style="text-align: center; padding: 20px 0;">
+<!-- Açılış ekranı -->
+<div id="intro-screen" style="position:fixed;top:0;left:0;width:100%;height:100%;
+background:#111;color:white;display:flex;align-items:center;justify-content:center;
+z-index:9999;font-size:24px;font-family:sans-serif;transition:opacity 1s;">
+  Hoş Geldiniz...
+</div>
+<script>
+window.addEventListener("load", function() {
+  const intro = document.getElementById("intro-screen");
+  if (intro) {
+    intro.style.opacity = 0;
+    setTimeout(() => { intro.remove(); }, 1000);
+  }
+});
+</script>
+<div style="background-color: #111; color: #fff; text-align: center; padding: 5px 0; font-size: 14px;">
+<a href="https://wa.me/905551112233" style="color: #0f0; margin-right: 20px;">📱 WhatsApp</a>
+<a href="https://instagram.com/atacannakliyat" style="color: #f9f; margin-left: 20px;">📸 Instagram</a>
+</div>
+<header class="parallax-header" style="text-align: center; padding: 20px 0;">
 <img alt="Atacan Logo" src="logo_main.png" style="height: 80px; margin-bottom: 10px;"/>
-<nav style="margin-top: 10px;">
+<button class="menu-toggle">☰ Menü</button><nav style="margin-top: 10px;">
 <ul style="list-style: none; padding: 0; display: flex; justify-content: center; flex-wrap: wrap; gap: 30px; font-size: 18px;">
 <li><a href="index.html">Ana Sayfa</a></li>
 <li><a href="hakkimizda.html">Hakkımızda</a></li>
@@ -81,8 +174,6 @@ a:hover { color: #f90; }
 </ul>
 </nav>
 </header>
-
-
 <section>
 <div class="service">
 <h2>Evden Eve Nakliyat</h2>
@@ -98,5 +189,46 @@ a:hover { color: #f90; }
 </div>
 <a class="btn-home" href="index.html">Ana Sayfaya Dön</a>
 </section>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const toggle = document.querySelector(".menu-toggle");
+  const nav = document.querySelector("nav");
+  if (toggle && nav) {
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("show");
+    });
+  }
+});
+</script>
+<style>
+.floating-icons {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.floating-icons a {
+  width: 50px;
+  height: 50px;
+  background-color: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+}
+.floating-icons a.instagram {
+  background-color: #e1306c;
+}
+</style>
+<div class="floating-icons">
+<a href="https://wa.me/905551112233" target="_blank">📱</a>
+<a class="instagram" href="https://instagram.com/atacannakliyat" target="_blank">📸</a>
+</div>
 </body>
 </html>

@@ -70,9 +70,54 @@ body {
 a { text-decoration: none; color: #222; transition: 0.3s; }
 a:hover { color: #f90; }
 </style>
+<style>
+    body { margin: 0; font-family: Arial, sans-serif; }
+    header, nav, footer { max-width: 100%; padding: 10px; text-align: center; }
+    nav a { display: inline-block; margin: 0 10px; font-size: 18px; }
+    img { max-width: 100%; height: auto; }
+    .container { padding: 10px; }
+    @media (max-width: 768px) {
+      nav a { display: block; margin: 10px 0; font-size: 20px; }
+    }
+    </style>
+<style>
+.parallax-header {
+  background-image: url('bg.jpg');
+  min-height: 220px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  font-size: 36px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+</style>
 </head>
 <body>
-<header style="text-align: center; padding: 20px 0;">
+<!-- Açılış ekranı -->
+<div id="intro-screen" style="position:fixed;top:0;left:0;width:100%;height:100%;
+background:#111;color:white;display:flex;align-items:center;justify-content:center;
+z-index:9999;font-size:24px;font-family:sans-serif;transition:opacity 1s;">
+  Hoş Geldiniz...
+</div>
+<script>
+window.addEventListener("load", function() {
+  const intro = document.getElementById("intro-screen");
+  if (intro) {
+    intro.style.opacity = 0;
+    setTimeout(() => { intro.remove(); }, 1000);
+  }
+});
+</script>
+<div style="background-color: #111; color: #fff; text-align: center; padding: 5px 0; font-size: 14px;">
+<a href="https://wa.me/905551112233" style="color: #0f0; margin-right: 20px;">📱 WhatsApp</a>
+<a href="https://instagram.com/atacannakliyat" style="color: #f9f; margin-left: 20px;">📸 Instagram</a>
+</div>
+<header class="parallax-header" style="text-align: center; padding: 20px 0;">
 <img alt="Atacan Logo" src="logo_main.png" style="height: 80px; margin-bottom: 10px;"/>
 <nav style="margin-top: 10px;">
 <ul style="list-style: none; padding: 0; display: flex; justify-content: center; flex-wrap: wrap; gap: 30px; font-size: 18px;">
@@ -83,8 +128,6 @@ a:hover { color: #f90; }
 </ul>
 </nav>
 </header>
-
-
 <section>
 <p>Bizimle iletişime geçmekten çekinmeyin. Size en kısa sürede dönüş sağlayacağız.</p>
 <form>
@@ -99,5 +142,35 @@ a:hover { color: #f90; }
 <h2>Harita</h2>
 <iframe src="https://maps.google.com/maps?q=istanbul&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"></iframe>
 </section>
+<style>
+.floating-icons {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.floating-icons a {
+  width: 50px;
+  height: 50px;
+  background-color: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+}
+.floating-icons a.instagram {
+  background-color: #e1306c;
+}
+</style>
+<div class="floating-icons">
+<a href="https://wa.me/905551112233" target="_blank">📱</a>
+<a class="instagram" href="https://instagram.com/atacannakliyat" target="_blank">📸</a>
+</div>
 </body>
 </html>
